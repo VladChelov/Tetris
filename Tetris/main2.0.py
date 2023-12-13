@@ -35,7 +35,8 @@ game_bg = pygame.image.load('img/bg2.jpg').convert()
 main_font = pygame.font.Font('font/font.ttf', 65)
 font = pygame.font.Font('font/font.ttf', 45)
 
-title_tetris = main_font.render('TETRIS', True, pygame.Color('darkorange'))
+title_tetris = main_font.render('MIPT IS', True, pygame.Color('darkorange'))
+title_uni = main_font.render('THE BEST', True, pygame.Color('darkorange'))
 title_score = font.render('score:', True, pygame.Color('green'))
 title_record = font.render('record:', True, pygame.Color('purple'))
 
@@ -160,7 +161,8 @@ while True:
         figure_rect.y = next_figure[i].y * TILE + 185
         pygame.draw.rect(sc, next_color, figure_rect)
     # draw titles
-    sc.blit(title_tetris, (485, -10))
+    sc.blit(title_tetris, (485, 0))
+    sc.blit(title_uni, (485, 50))
     sc.blit(title_score, (535, 780))
     sc.blit(font.render(str(score), True, pygame.Color('white')), (550, 840))
     sc.blit(title_record, (525, 650))
